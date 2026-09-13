@@ -1,0 +1,41 @@
+{
+  "name": "onimi-pages-creator",
+  "version": "0.1.0",
+  "description": "Create and validate polished standalone HTML in your own agent workspace.",
+  "author": "oceanai <oceanailab@gmail.com>",
+  "type": "module",
+  "license": "MIT-0",
+  "engines": {
+    "node": ">=20"
+  },
+  "bin": {
+    "onimi-pages-creator": "bin/install.mjs"
+  },
+  "files": [
+    "bin/install.mjs",
+    "skills/onimi-pages-creator",
+    "INSTALL.md",
+    "docs/zh-CN/INSTALL.md",
+    "docs/zh-CN/README.md"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zlch-oceanai/onimi-pages-creator.git"
+  },
+  "homepage": "https://onimi.ai/",
+  "bugs": {
+    "url": "https://github.com/zlch-oceanai/onimi-pages-creator/issues"
+  },
+  "keywords": [
+    "agent-skill",
+    "html",
+    "onimi",
+    "codex",
+    "claude-code",
+    "cursor"
+  ],
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org"
+  }
+}
