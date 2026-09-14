@@ -51,7 +51,7 @@ its browser OAuth flow only when you decide to publish.
 The repository contains public distribution files only and uses the MIT-0 license. It contains no
 application source, credentials, hosted user content, or test-service configuration.
 
-## 0.1.0
+## 0.1.1
 
 - Standalone Creator repository and npm package.
 - Bilingual installation guides and local-change-safe direct-download updates.
