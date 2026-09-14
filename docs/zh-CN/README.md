@@ -47,7 +47,7 @@ node skills/onimi-pages-creator/scripts/validate-html.mjs /absolute/path/to/page
 
 仓库只包含 MIT-0 许可的公开分发文件，不包含应用源码、凭证、托管用户内容或测试服务配置。
 
-## 0.1.0
+## 0.1.1
 
 - 独立 Creator 仓库与 npm 包。
 - 双语安装说明和保护本地修改的直接下载更新。
