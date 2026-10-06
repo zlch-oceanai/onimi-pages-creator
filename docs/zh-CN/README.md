@@ -6,12 +6,15 @@
 
 ## 安装
 
-选择来源前先查看[已验证渠道状态](https://downloads.onimi.ai/skills/manifest.json)。只有 npm 和
-ClawHub 渠道标记为可用后，才使用其 `latest` 版本或公开条目。
+默认 Onimi 安装会一起准备 Creator 与 Publish，但两个模块仍各自分工。先查看
+[已验证渠道状态](https://downloads.onimi.ai/skills/manifest.json)；只有 Publish npm 渠道版本等于当前
+Publish 版本时才运行：
 
 ```sh
-npx --registry=https://registry.npmjs.org onimi-pages-creator@latest install --agent codex
+npx --registry=https://registry.npmjs.org onimi-pages-publish@latest install --suite --agent codex
 ```
+
+安装器会保留所有已有模块和个人修改，只补缺失模块。下方独立 Creator 包是本地创作的高级安装方式。
 
 其他来源：
 
@@ -37,7 +40,8 @@ Creator 在本地工作，不会把提示词或页面发送给 Onimi Pages。它
 node skills/onimi-pages-creator/scripts/validate-html.mjs /absolute/path/to/page.html
 ```
 
-创作不代表授权发布。只有决定发布时，才另行安装 `onimi-pages-publish` Skill 并完成浏览器 OAuth。
+创作不代表授权发布。即使套件已经准备 Publish，也只在受控模板、云草稿、云 Slides 或发布任务
+实际需要时连接；同账号且 scope 足够的有效连接应直接复用，不重复授权。
 
 ## 仓库目录
 
@@ -47,7 +51,7 @@ node skills/onimi-pages-creator/scripts/validate-html.mjs /absolute/path/to/page
 
 仓库只包含 MIT-0 许可的公开分发文件，不包含应用源码、凭证、托管用户内容或测试服务配置。
 
-## 0.1.1
+## 0.3.1
 
 - 独立 Creator 仓库与 npm 包。
 - 双语安装说明和保护本地修改的直接下载更新。

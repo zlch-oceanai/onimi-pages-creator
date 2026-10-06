@@ -6,13 +6,16 @@ Create, refine, validate, and preview polished standalone HTML in your own agent
 
 ## Install
 
-Check the [verified channel states](https://downloads.onimi.ai/skills/manifest.json) before choosing a
-source. npm's `latest` release and the ClawHub listing should be used only when their channels are
-marked available.
+The default Onimi setup prepares Creator and Publish together while keeping their responsibilities
+separate. Check the [verified channel states](https://downloads.onimi.ai/skills/manifest.json) first;
+run this only when the Publish npm channel version equals the current Publish version:
 
 ```sh
-npx --registry=https://registry.npmjs.org onimi-pages-creator@latest install --agent codex
+npx --registry=https://registry.npmjs.org onimi-pages-publish@latest install --suite --agent codex
 ```
+
+The installer preserves every existing module and personal change and adds only missing modules.
+Use the standalone Creator package below only as an advanced local-only installation.
 
 Other sources:
 
@@ -39,8 +42,9 @@ fictional data, and inspect the result in a browser. Run the bundled validator d
 node skills/onimi-pages-creator/scripts/validate-html.mjs /absolute/path/to/page.html
 ```
 
-Creation does not authorize publication. Install the separate `onimi-pages-publish` Skill and complete
-its browser OAuth flow only when you decide to publish.
+Creation does not authorize publication. Even when the suite prepared Publish, connect only when a
+cloud template, cloud draft, cloud Slides or publication task needs it. Reuse a valid same-account
+connection with sufficient scopes instead of authorizing twice.
 
 ## Repository layout
 
@@ -51,7 +55,7 @@ its browser OAuth flow only when you decide to publish.
 The repository contains public distribution files only and uses the MIT-0 license. It contains no
 application source, credentials, hosted user content, or test-service configuration.
 
-## 0.1.1
+## 0.3.1
 
 - Standalone Creator repository and npm package.
 - Bilingual installation guides and local-change-safe direct-download updates.
